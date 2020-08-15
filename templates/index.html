@@ -37,76 +37,55 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <table>
-            <tr><th>
-              Price
-            </th>
-          <th>
-            Address
-          </th>
-        <th>
-          Postal Code
-        </th>
-      <th>
-        Bedrooms
-      </th>
-    <th>
-      Bathrooms
-    </th>
-  <th>
-    Property
-  </th>
-</tr>
-        {% for realestate_obj in calgary %}
-             
-                         <tr>
-                          <td>
-                            {{realestate_obj.price|safe}}</td>
-                           <td>
-                      {{realestate_obj.address|safe}}</td>
-                      <td>
-                      {{realestate_obj.postal_code|safe}}</td>
-                      <td>
-                        {{realestate_obj.bedrooms|safe}}</td>
-                        <td>
-                          {{realestate_obj.bath|safe}}</td>
-                          <td>
-                            {{realestate_obj.property_type|safe}}</td></tr>
-                    
-                      {% endfor %}
-				 </table>
+            
+            <!-- New Table -->
+            
+            <table class="table table-bordered table-hover table-condensed">
+              <thead><tr><th title="Field #1">Price ($)</th>
+              <th title="Field #2">Address</th>
+              <th title="Field #3">Postal Code</th>
+              <th title="Field #4">Bedrooms</th>
+              <th title="Field #5">Bathrooms</th>
+              <th title="Field #6">Property Type</th>
+              </tr></thead>
+              <tbody><tr>
+                {% for realestate_obj in calgary %}
+              <td align="left">{{realestate_obj.price|safe}}</td>
+              <td align="left">{{realestate_obj.address|safe}}</td>
+              <td align="left">{{realestate_obj.postal_code|safe}}</td>
+              <td align="left">{{realestate_obj.bedrooms|safe}}</td>
+              <td align="left">{{realestate_obj.bath|safe}}</td>
+              <td align="left">{{realestate_obj.property_type|safe}}</td>
+              </tr>
+              {% endfor %}
+              </tbody>
+              </table>
+            <!-- End Table -->
+            
           </div>
-          <div class="vl"></div>
+
 			<div class="col-md-4">
-        <table>
-              <tr><th>
-                Postal Code
-              </th>
-            <th>
-              Walk Score
-            </th>
-          <th>
-            Bike Score
-          </th>
-        <th>
-          Transit Score
-        </th>
-      </tr>
-          {% for realestate_obj in score %}
-               
-                           <tr>
-                            <td>
-                              {{realestate_obj.postal_code|safe}}</td>
-                             <td>
-                        {{realestate_obj.walk_score|safe}}</td>
-                        <td>
-                        {{realestate_obj.bike_score|safe}}</td>
-                        <td>
-                          {{realestate_obj.transit_score|safe}}</td>
-                          </tr>
-                      
-                        {% endfor %}
-			</table>
+
+        <!-- New Table -->
+            
+        <table class="table table-bordered table-hover table-condensed">
+          <thead><tr><th title="Field #1">Postal Code</th>
+          <th title="Field #2">Walk Score</th>
+          <th title="Field #3">Bike Score</th>
+          <th title="Field #4">Transit Score</th>
+          </tr></thead>
+          <tbody><tr>
+            {% for realestate_obj in score %}
+          <td align="left">{{realestate_obj.postal_code|safe}}</td>
+          <td align="left">{{realestate_obj.walk_score|safe}}</td>
+          <td align="left">{{realestate_obj.bike_score|safe}}</td>
+          <td align="left">{{realestate_obj.transit_score|safe}}</td>
+          </tr>
+          {% endfor %}
+          </tbody>
+          </table>
+        <!-- End Table -->
+
             </div>
           
     </div>
