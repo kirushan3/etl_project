@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Remax Calgary Realestate</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <style>
+    img {
+        vertical-align: middle;
+        height: 500px;
+        width: 500px;
+    }
+    .border {
+      border-right: 1px solid black;
+    }
+
+.vl {
+  border-left: 2px solid gray;
+
+}
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1><b>Remax Calgary Realestate</b></h1>
+
+    </div>
+    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <table>
+            <tr><th>
+              Price
+            </th>
+          <th>
+            Address
+          </th>
+        <th>
+          Postal Code
+        </th>
+      <th>
+        Bedrooms
+      </th>
+    <th>
+      Bathrooms
+    </th>
+  <th>
+    Property
+  </th>
+</tr>
+        {% for realestate_obj in calgary %}
+             
+                         <tr>
+                          <td>
+                            {{realestate_obj.price|safe}}</td>
+                           <td>
+                      {{realestate_obj.address|safe}}</td>
+                      <td>
+                      {{realestate_obj.postal_code|safe}}</td>
+                      <td>
+                        {{realestate_obj.bedrooms|safe}}</td>
+                        <td>
+                          {{realestate_obj.bath|safe}}</td>
+                          <td>
+                            {{realestate_obj.property_type|safe}}</td></tr>
+                    
+                      {% endfor %}
+				 </table>
+          </div>
+          <div class="vl"></div>
+			<div class="col-md-4">
+        <table>
+              <tr><th>
+                Postal Code
+              </th>
+            <th>
+              Walk Score
+            </th>
+          <th>
+            Bike Score
+          </th>
+        <th>
+          Transit Score
+        </th>
+      </tr>
+          {% for realestate_obj in score %}
+               
+                           <tr>
+                            <td>
+                              {{realestate_obj.postal_code|safe}}</td>
+                             <td>
+                        {{realestate_obj.walk_score|safe}}</td>
+                        <td>
+                        {{realestate_obj.bike_score|safe}}</td>
+                        <td>
+                          {{realestate_obj.transit_score|safe}}</td>
+                          </tr>
+                      
+                        {% endfor %}
+			</table>
+            </div>
+          
+    </div>
+  </div>
+      
+</div>
+</body>
+
+</html>
