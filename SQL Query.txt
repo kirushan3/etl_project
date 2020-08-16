@@ -1,5 +1,6 @@
 --create tables for raw data to be loaded into
 CREATE TABLE calgary_df (
+	id SERIAL PRIMARY KEY,
 	price INT,
 	address TEXT,
 	postal_code TEXT,
