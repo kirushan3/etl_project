@@ -82,7 +82,7 @@ Creating connection and loading data to realestate_db
 
 ![Picture10](images/Picture10.png)
 
-Loaded Data
+#### Loaded Data
 
 ![Picture11a](images/Picture11a.png)
 
@@ -96,7 +96,7 @@ Creating connection and loading data to realestate_db
 
 ![Picture13](images/Picture13.png)
 
-Loaded Data
+#### Loaded Data
 ![Screen Shot 2020 08 16 At 8.19.32 PM](images/Screen%20Shot%202020-08-16%20at%208.19.32%20PM.png)
 
 ![Screen Shot 2020 08 16 At 8.18.31 PM](images/Screen%20Shot%202020-08-16%20at%208.18.31%20PM.png)
