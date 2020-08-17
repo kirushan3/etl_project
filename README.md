@@ -1,5 +1,6 @@
 # ETL Project
 
+
 # Real Estate Listings and Walk Score in Calgary
 
 ## Objective
