@@ -3,6 +3,8 @@
 
 # Real Estate Listings and Walk Score in Calgary
 
+![42930188 S](images/42930188_s.jpg)
+
 ## Objective
 
 • Extracting Real Estate listings in Calgary, Alberta
@@ -32,6 +34,7 @@ Using BeautifulSoup to scrape property details (house address, house details).
 
 ![Picture2png](images/Picture2png.png)
 
+## Scraping Walk Score Data
 
 Using the corresponding addresses from the Calgary real estate data
 
