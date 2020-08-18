@@ -22,7 +22,7 @@ databases for optimal functionality
 
 • Remax Canada: https://www.remax.ca/ab/calgary-real-estate
 
-• Walk Score: https://www.walkscore.com/CAAB/
+• Walk Score: https://www.walkscore.com/CA-AB/Calgary
 Calgary
 
 
