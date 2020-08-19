@@ -3,9 +3,11 @@ CREATE TABLE calgary_df (
 	id SERIAL PRIMARY KEY,
 	price INT,
 	address TEXT,
-	postal_code TEXT,
-	bedrooms TEXT,
-	bath TEXT,
+	postal_code VARCHAR(10),
+	bedrooms FLOAT,
+	full_bath FLOAT,
+	half_bath FLOAT,
+	property_area FLOAT,
 	property_type TEXT
 	);
 
