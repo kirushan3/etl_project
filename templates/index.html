@@ -45,16 +45,20 @@
               <th title="Field #2">Address</th>
               <th title="Field #3">Postal Code</th>
               <th title="Field #4">Bedrooms</th>
-              <th title="Field #5">Bathrooms</th>
-              <th title="Field #6">Property Type</th>
+              <th title="Field #5">Full Bathrooms</th>
+              <th title="Field #6">Half Bathrooms</th>
+              <th title="Field #7">Property Area</th>
+              <th title="Field #8">Property Type</th>
               </tr></thead>
               <tbody><tr>
                 {% for realestate_obj in calgary %}
               <td align="left">{{realestate_obj.price|safe}}</td>
               <td align="left">{{realestate_obj.address|safe}}</td>
               <td align="left">{{realestate_obj.postal_code|safe}}</td>
-              <td align="left">{{realestate_obj.bedrooms|safe}}</td>
-              <td align="left">{{realestate_obj.bath|safe}}</td>
+              <td align="left">{{realestate_obj.bed|safe}}</td>
+              <td align="left">{{realestate_obj.full_bath|safe}}</td>
+              <td align="left">{{realestate_obj.half_bath|safe}}</td>
+              <td align="left">{{realestate_obj.property_area|safe}}</td>
               <td align="left">{{realestate_obj.property_type|safe}}</td>
               </tr>
               {% endfor %}
