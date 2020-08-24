@@ -36,7 +36,8 @@ databases for optimal functionality.
 Calgary
 
 
-# Extraction
+# Extract
+
 
 ## Scraping Calgary Real Estate Data
 
@@ -89,7 +90,8 @@ Calgary
         	house_details.append(np.nan)
 
 
-# Data Transformation Process
+
+# Transform
 
 
 	address_df = pd.DataFrame(house_address)
@@ -162,7 +164,7 @@ Calgary
 	details_df.head()
 	
 
-## Creating Calgary Listings DataFrame
+### Creating Calgary Listings DataFrame
 
 	
 	calgary_df_dup = pd.concat([df_add, details_df], axis=1)
@@ -170,7 +172,7 @@ Calgary
 	calgary_df.head()
 	
 
-## Store Calgary Listings as CSV
+### Store Calgary Listings as CSV
 
 	
 	calgary_df.to_csv('calgary_df.csv', index=False)
@@ -178,7 +180,7 @@ Calgary
 
 
 
-## Reading data from saved Calgary Listings
+### Reading data from saved Calgary Listings
 
 
 
@@ -188,7 +190,7 @@ Calgary
 	
 
 
-## Scraping Walk Score Data
+### Scraping Walk Score Data
 
 	
 	post_code_list = []
@@ -241,7 +243,7 @@ Calgary
         	scores_transit.append(ts)
 
 
-## Creating the Walk Score DataFrame
+### Creating the Walk Score DataFrame
 
 	
 	score_df_trans = {'postal_code':post_code_list, 
@@ -254,15 +256,18 @@ Calgary
 	
 
 
-## Saving Walk Score data to CSV
+### Saving Walk Score data to CSV
 
 	
 	score_df.to_csv('score_df.csv', index=False)
 	
 
 
+# Load
 
-# # MongoDB
+## Loading to a Non-relational database
+
+## MongoDB
 	
 	import pymongo
 	from pymongo import MongoClient
@@ -284,9 +289,9 @@ Calgary
 
 
 
+## Loading to Relational databases
 
-
-# # PostgreSQL
+## PostgreSQL
 
 	
 	calgary_df = pd.read_csv('calgary_df.csv')
@@ -301,7 +306,7 @@ Calgary
 
 
 
-# # MySQL
+## MySQL
 
 	
 	engine = create_engine(f'mysql+pymysql://root:Myp@sswordis123@localhost/realestate_db', pool_recycle=3600)
@@ -310,12 +315,12 @@ Calgary
 	
 
 
-# # SQL Server
+## SQL Server
 
 	import urllib
 	import pyodbc
 	
-	quoted = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER=DAYOTHOMPSON;DATABASE=realestate_db")
+	quoted = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER={Servername};DATABASE=realestate_db")
 	engine = create_engine('mssql+pyodbc:///?odbc_connect={}'.format(quoted))
 	cal_df.to_sql('calgary', schema='dbo', con = engine, chunksize=200, method='multi', index=False, if_exists='replace')
 	score_df.to_sql('score', schema='dbo', con = engine, chunksize=200, method='multi', index=False, if_exists='append')
