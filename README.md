@@ -89,7 +89,7 @@ Calgary
         	house_details.append(np.nan)
 
 
-# In[9]:
+# Data Transformation Process
 
 
 	address_df = pd.DataFrame(house_address)
@@ -104,14 +104,11 @@ Calgary
 	new_df.head()
 
 
-# In[10]:
-
 	
 	final_df = new_df[2].str.split(', Calgary, AB, ', expand=True)
 	final_df.head()
 	
 
-# In[11]:
 
 	
 	df_add = pd.concat([new_df, final_df], axis=1)
@@ -120,7 +117,6 @@ Calgary
 	df_add.head()
 	
 
-# In[12]:
 
 	
 	details = pd.DataFrame(house_details)
@@ -128,7 +124,6 @@ Calgary
 	details_df_temp.head()
 	
 
-# In[14]:
 
 	
 	details_df_bed = details_df_temp[0].str.replace(' bed', '')
@@ -136,7 +131,6 @@ Calgary
 	details_df_area = details_df_temp[2].str.replace(' sqft', '')
 	
 
-# In[15]:
 
 	
 	details_df_bath_all = details_df_bath.str.split('+', expand=True)
@@ -144,7 +138,6 @@ Calgary
 	details_df_bath_half = details_df_bath_all[1]
 	
 
-# In[16]:
 
 	
 	details_df_bed = details_df_bed.replace('N/A', np.nan)
@@ -157,21 +150,19 @@ Calgary
 	details_df_bath_half = pd.to_numeric(details_df_bath_half)
 	
 
-# In[17]:
 
 	
 	data = {'bed':details_df_bed, 'full_bath':details_df_bath_full, 'half_bath':details_df_bath_half,
        'property_area':details_df_area, 'property_type':details_df_temp[3]}
 	   
 
-# In[18]:
 
 	
 	details_df = pd.DataFrame(data)
 	details_df.head()
 	
 
-### Creating Calgary Listings DataFrame
+## Creating Calgary Listings DataFrame
 
 	
 	calgary_df_dup = pd.concat([df_add, details_df], axis=1)
@@ -179,7 +170,7 @@ Calgary
 	calgary_df.head()
 	
 
-### Store Calgary Listings as CSV
+## Store Calgary Listings as CSV
 
 	
 	calgary_df.to_csv('calgary_df.csv', index=False)
@@ -187,7 +178,7 @@ Calgary
 
 
 
-### Reading data from saved Calgary Listings
+## Reading data from saved Calgary Listings
 
 
 
@@ -196,7 +187,8 @@ Calgary
 	calgary_df.head()
 	
 
-### Scraping Walk Score Data
+
+## Scraping Walk Score Data
 
 	
 	post_code_list = []
@@ -204,7 +196,6 @@ Calgary
 	for i in calgary_df["postal_code"]:
     post_code_list.append(i)
 	
-
 
 
 	
@@ -250,7 +241,7 @@ Calgary
         	scores_transit.append(ts)
 
 
-### Creating the Walk Score DataFrame
+## Creating the Walk Score DataFrame
 
 	
 	score_df_trans = {'postal_code':post_code_list, 
@@ -262,45 +253,21 @@ Calgary
 	score_df.head()
 	
 
-### Saving Walk Score data to CSV
+
+## Saving Walk Score data to CSV
 
 	
 	score_df.to_csv('score_df.csv', index=False)
 	
 
-# -------------------
 
-# # PostgreSQL
-
-# In[26]:
-
-	
-	calgary_df = pd.read_csv('calgary_df.csv')
-	score_df = pd.read_csv('score_df.csv')
-	
-
-# In[28]:
-
-	
-	rds_connection_string = "postgres:123@localhost:5432/realestate_db"
-	engine = create_engine(f'postgresql://{rds_connection_string}')
-	
-	calgary_df.to_sql(name= "calgary", con=engine, if_exists="replace", index=False)
-	score_df.to_sql(name= "score", con=engine, if_exists="append", index=False)
-	
 
 # # MongoDB
-
-# In[29]:
-
 	
 	import pymongo
 	from pymongo import MongoClient
 	
 	conn = 'mongodb://localhost:27017'
-	
-
-# Making a Connection with MongoClient
 	
 	client = MongoClient(conn)
 	
@@ -316,10 +283,25 @@ Calgary
 	collection.insert_many(score_dict)
 
 
+
+
+
+# # PostgreSQL
+
+	
+	calgary_df = pd.read_csv('calgary_df.csv')
+	score_df = pd.read_csv('score_df.csv')
+	
+	rds_connection_string = "postgres:123@localhost:5432/realestate_db"
+	engine = create_engine(f'postgresql://{rds_connection_string}')
+	
+	calgary_df.to_sql(name= "calgary", con=engine, if_exists="replace", index=False)
+	score_df.to_sql(name= "score", con=engine, if_exists="append", index=False)
+	
+
+
+
 # # MySQL
-
-# In[30]:
-
 
 	
 	engine = create_engine(f'mysql+pymysql://root:Myp@sswordis123@localhost/realestate_db', pool_recycle=3600)
@@ -327,10 +309,8 @@ Calgary
 	score_df.to_sql(name="score", con=engine, if_exists="append", index=False)
 	
 
+
 # # SQL Server
-
-# In[ ]:
-
 
 	import urllib
 	import pyodbc
