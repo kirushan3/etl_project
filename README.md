@@ -276,9 +276,11 @@ databases for optimal functionality.
 	score_dict = score_df.to_dict("records")
 	collection.insert_many(score_dict)
 
-![Screen Shot 2020 08 24 At 1.03.40 AM](images/Screen%20Shot%202020-08-24%20at%201.03.40%20AM.png)
+![Screen Shot 2020 08 24 At 1.13.47 AM](images/Screen%20Shot%202020-08-24%20at%201.13.47%20AM.png)
 
-![Screen Shot 2020 08 24 At 1.04.54 AM](images/Screen%20Shot%202020-08-24%20at%201.04.54%20AM.png)
+
+![Screen Shot 2020 08 24 At 1.14.28 AM](images/Screen%20Shot%202020-08-24%20at%201.14.28%20AM.png)
+
 
 ## Loading to Relational databases
 
