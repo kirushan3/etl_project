@@ -5,17 +5,27 @@
 
 ![42930188 S](images/42930188_s.jpg)
 
+## Overview
+
+Just recently, you landed a new job in another province and are trying to decide if you want to buy a new home or apartment.
+You have contacted a real estate company to provide you with a detailed copy of the current listings in the province.
+Unfortunately, the copies provided only contains the current prices of the houes and apartments but gives no indication of the walking,
+transit, and biking routes to nearby amenities. You would like the information provided to include ratings based on the distances to amenities 
+in each category.
+This might pose a slight problem because you want to have all route options available to you and at anytime you need. You decide to get down 
+to some digging by performing an ETL challenge on two websites; ReMax and Walk Score.
+
+
 ## Objective
 
-• Extracting Real Estate listings in Calgary, Alberta
+• Extract Real Estate listings in Calgary, Alberta
 and Walk Scores for corresponding house addresses.
-• Walk Score analyzes the walking routes of these
-addresses to nearby amenities. Points are awarded
-based on the distance to amenities in each
-category.
-• Transforming retrieved data into easy-to-read tables
+
+• Transforming retrieved data into easy-to-read tables.
+
 • Loading transformed data into relational and nonrelational
-databases for optimal functionality
+databases for optimal functionality.
+
 
 
 ## Data Sources
@@ -35,9 +45,9 @@ Calgary
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Real Estate Listings on ReMax and Walk Score
 
-# In[6]:
+
+## Libraries imported
 
 
 	import pandas as pd
