@@ -310,8 +310,10 @@ databases for optimal functionality.
 	score_df.to_sql(name="score", con=engine, if_exists="append", index=False)
 	
 
+### Calgary listings table
 ![Screen Shot 2020 08 24 At 1.28.30 AM](images/Screen%20Shot%202020-08-24%20at%201.28.30%20AM.png)
 
+### Walk Score table for Calgary listings
 ![Screen Shot 2020 08 24 At 1.29.25 AM](images/Screen%20Shot%202020-08-24%20at%201.29.25%20AM.png)
 
 ## SQL Server
