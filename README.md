@@ -33,10 +33,9 @@ databases for optimal functionality.
 
 ## Data Sources
 
-• Remax Canada: https://www.remax.ca/ab/calgaryreal-estate
+• Remax Canada: https://www.remax.ca/ab/calgary-real-estate
 
-• Walk Score: https://www.walkscore.com/CAAB/
-Calgary
+• Walk Score: https://www.walkscore.com/CA-AB/Calgary
 
 
 # Extract
