@@ -107,11 +107,15 @@ databases for optimal functionality.
 	del new_df[1]
 	new_df.head()
 
+![Screen Shot 2020 08 24 At 12.34.29 AM](images/Screen%20Shot%202020-08-24%20at%2012.34.29%20AM.png)
+
 
 	
 	final_df = new_df[2].str.split(', Calgary, AB, ', expand=True)
 	final_df.head()
 	
+
+![Screen Shot 2020 08 24 At 12.35.47 AM](images/Screen%20Shot%202020-08-24%20at%2012.35.47%20AM.png)
 
 
 	
@@ -122,6 +126,9 @@ databases for optimal functionality.
 	
 
 
+![Screen Shot 2020 08 24 At 12.36.18 AM](images/Screen%20Shot%202020-08-24%20at%2012.36.18%20AM.png)
+
+
 	
 	details = pd.DataFrame(house_details)
 	details_df_temp = details[0].str.split('|', expand=True)
@@ -129,20 +136,19 @@ databases for optimal functionality.
 	
 
 
+![Screen Shot 2020 08 24 At 12.36.51 AM](images/Screen%20Shot%202020-08-24%20at%2012.36.51%20AM.png)
+
+
 	
 	details_df_bed = details_df_temp[0].str.replace(' bed', '')
 	details_df_bath = details_df_temp[1].str.replace(' bath', '')
 	details_df_area = details_df_temp[2].str.replace(' sqft', '')
 	
-
-
 	
 	details_df_bath_all = details_df_bath.str.split('+', expand=True)
 	details_df_bath_full = details_df_bath_all[0]
 	details_df_bath_half = details_df_bath_all[1]
 	
-
-
 	
 	details_df_bed = details_df_bed.replace('N/A', np.nan)
 	details_df_bed = pd.to_numeric(details_df_bed)
@@ -153,18 +159,17 @@ databases for optimal functionality.
 	details_df_bath_half = details_df_bath_half.replace('N/A', np.nan)
 	details_df_bath_half = pd.to_numeric(details_df_bath_half)
 	
-
-
 	
 	data = {'bed':details_df_bed, 'full_bath':details_df_bath_full, 'half_bath':details_df_bath_half,
        'property_area':details_df_area, 'property_type':details_df_temp[3]}
 	   
-
-
 	
 	details_df = pd.DataFrame(data)
 	details_df.head()
 	
+
+![Screen Shot 2020 08 24 At 12.37.16 AM](images/Screen%20Shot%202020-08-24%20at%2012.37.16%20AM.png)
+
 
 ### Creating Calgary Listings DataFrame
 
@@ -174,7 +179,7 @@ databases for optimal functionality.
 	calgary_df.head()
 	
 
-![Screen Shot 2020 08 24 At 12.29.19 AM](images/Screen%20Shot%202020-08-24%20at%2012.29.19%20AM.png)
+![Screen Shot 2020 08 24 At 12.37.42 AM](images/Screen%20Shot%202020-08-24%20at%2012.37.42%20AM.png)
 
 ### Store Calgary Listings as CSV
 
@@ -193,6 +198,7 @@ databases for optimal functionality.
 	calgary_df.head()
 	
 
+![Screen Shot 2020 08 24 At 12.42.45 AM](images/Screen%20Shot%202020-08-24%20at%2012.42.45%20AM.png)
 
 ### Scraping Walk Score Data
 
@@ -202,8 +208,6 @@ databases for optimal functionality.
 	for i in calgary_df["postal_code"]:
     post_code_list.append(i)
 	
-
-
 	
 	scores_walk = []
 	scores_bike = []
@@ -259,6 +263,7 @@ databases for optimal functionality.
 	score_df.head()
 	
 
+![Screen Shot 2020 08 24 At 12.45.01 AM](images/Screen%20Shot%202020-08-24%20at%2012.45.01%20AM.png)
 
 ### Saving Walk Score data to CSV
 
