@@ -243,7 +243,7 @@ databases for optimal functionality.
 	score_df.head()
 	
 
-![Screen Shot 2020 08 24 At 12.45.01 AM](images/Screen%20Shot%202020-08-24%20at%2012.45.01%20AM.png)
+![Screen Shot 2020 08 24 At 12.50.49 AM](images/Screen%20Shot%202020-08-24%20at%2012.50.49%20AM.png)
 
 ### Saving Walk Score data to CSV
 
