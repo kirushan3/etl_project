@@ -276,7 +276,9 @@ databases for optimal functionality.
 	score_dict = score_df.to_dict("records")
 	collection.insert_many(score_dict)
 
+![Screen Shot 2020 08 24 At 1.03.40 AM](images/Screen%20Shot%202020-08-24%20at%201.03.40%20AM.png)
 
+![Screen Shot 2020 08 24 At 1.04.54 AM](images/Screen%20Shot%202020-08-24%20at%201.04.54%20AM.png)
 
 ## Loading to Relational databases
 
@@ -298,7 +300,7 @@ databases for optimal functionality.
 ## MySQL
 
 	
-	engine = create_engine(f'mysql+pymysql://root:Myp@sswordis123@localhost/realestate_db', pool_recycle=3600)
+	engine = create_engine(f'mysql+pymysql://root:{password}@localhost/realestate_db', pool_recycle=3600)
 	calgary_df.to_sql(name="calgary", con=engine, if_exists="replace", index=False)
 	score_df.to_sql(name="score", con=engine, if_exists="append", index=False)
 	
