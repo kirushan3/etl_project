@@ -42,12 +42,7 @@ Calgary
 
 
 
-#!/usr/bin/env python
-# coding: utf-8
-
-
-
-## Libraries imported
+### Libraries imported
 
 
 	import pandas as pd
@@ -62,9 +57,9 @@ Calgary
 	print('Libraries imported!')
 
 
-# # Calgary
 
-# In[8]:
+
+### Using BeautifulSoup to scrape property details (house address, house details).
 
 
 	house_address = []
@@ -176,7 +171,7 @@ Calgary
 	details_df.head()
 	
 
-# In[19]:
+### Creating Calgary Listings DataFrame
 
 	
 	calgary_df_dup = pd.concat([df_add, details_df], axis=1)
@@ -184,24 +179,24 @@ Calgary
 	calgary_df.head()
 	
 
-# In[20]:
+### Store Calgary Listings as CSV
 
 	
 	calgary_df.to_csv('calgary_df.csv', index=False)
 	
 
-# ----------------
 
-# ### Walk Score
 
-# In[21]:
+### Reading data from saved Calgary Listings
+
+
 
 	
 	calgary_df = pd.read_csv('calgary_df.csv')
 	calgary_df.head()
 	
 
-# In[22]:
+### Scraping Walk Score Data
 
 	
 	post_code_list = []
@@ -210,7 +205,7 @@ Calgary
     post_code_list.append(i)
 	
 
-# In[23]:
+
 
 	
 	scores_walk = []
@@ -255,7 +250,7 @@ Calgary
         	scores_transit.append(ts)
 
 
-# In[24]:
+### Creating the Walk Score DataFrame
 
 	
 	score_df_trans = {'postal_code':post_code_list, 
@@ -267,7 +262,7 @@ Calgary
 	score_df.head()
 	
 
-# In[25]:
+### Saving Walk Score data to CSV
 
 	
 	score_df.to_csv('score_df.csv', index=False)
