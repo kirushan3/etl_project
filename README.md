@@ -298,7 +298,7 @@ databases for optimal functionality.
 	score_df.to_sql(name= "score", con=engine, if_exists="append", index=False)
 	
 
-### Picture below shows the result of joining the Calgary listings and Score tables in PostgreSQL after loading database.
+### Picture below shows the result of joining the Calgary listings and Score tables in PostgreSQL after loading database and makes the search for a new house an exciting experience.
 
 ![Screen Shot 2020 08 24 At 2.09.09 AM](images/Screen%20Shot%202020-08-24%20at%202.09.09%20AM.png)
 
@@ -333,91 +333,6 @@ databases for optimal functionality.
 
 
 
-
-
-
-
-Using BeautifulSoup to scrape property details (house address, house details).
-![Picture1](images/Picture1.png)
-
-
-
-
-
-
-
-![Picture2png](images/Picture2png.png)
-
-
-## Scraping Walk Score Data
-
-Using the corresponding addresses from the Calgary real estate data
-
-![Picture3](images/Picture3.png)
-
-
-# Transform
-
-## Cleaning the Calgary Real Estate Data
-
-#### First data frame: Address and Price details
-
-![Picture4](images/Picture4.png)
-
-
-• Values separated into columns: price, address, postal code,
-• Price column type changed to integer
-
-![Picture5](images/Picture5.png)
-
-#### Second data frame: House details
-• Values separated into columns: bedrooms, bath, property type
-
-![Picture6](images/Picture6.png)
-
-#### Joining the Calgary Real Estate Data frames
-• Concatenating House Address/Price details and
-House details data frames.
-
-![Picture7](images/Picture7.png)
-
-
-## Cleaning the Walk Score Data
-• Data converted into data frame and columns
-named.
-
-![Picture8](images/Picture8.png)
-
-![Picture9](images/Picture9.png)
-
-# Load
-
-## Loading to Relational Database
-
-### PostgreSQL
-
-Creating connection and loading data to realestate_db
-
-![Picture10](images/Picture10.png)
-
-#### Loaded Data
-
-![Picture11a](images/Picture11a.png)
-
-![Picture12](images/Picture12.png)
-
-## Loading to Non-relational Database
-
-### MongoDB
-
-Creating connection and loading data to realestate_db
-
-![Picture13](images/Picture13.png)
-
-#### Loaded Data
-![Screen Shot 2020 08 16 At 8.19.32 PM](images/Screen%20Shot%202020-08-16%20at%208.19.32%20PM.png)
-
-![Screen Shot 2020 08 16 At 8.18.31 PM](images/Screen%20Shot%202020-08-16%20at%208.18.31%20PM.png)
 
 ## Converting to a Web-based Application
 
