@@ -300,7 +300,8 @@ databases for optimal functionality.
 
 ### Picture below shows the result of joining the Calgary listings and Score tables in PostgreSQL after loading database.
 
-![Screen Shot 2020 08 24 At 1.10.33 AM](images/Screen%20Shot%202020-08-24%20at%201.10.33%20AM.png)
+![Screen Shot 2020 08 24 At 2.09.09 AM](images/Screen%20Shot%202020-08-24%20at%202.09.09%20AM.png)
+
 
 ## MySQL
 
