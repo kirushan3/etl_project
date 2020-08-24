@@ -16,13 +16,16 @@ This might pose a slight problem because you want to have all route options avai
 to some digging by performing an ETL challenge on two websites; ReMax and Walk Score.
 
 
-## Objective
+## Objective (ETL)
 
+## Extract
 • Extract Real Estate listings in Calgary, Alberta
 and Walk Scores for corresponding house addresses.
 
+## Transfrom
 • Transforming retrieved data into easy-to-read tables.
 
+## Load
 • Loading transformed data into relational and nonrelational
 databases for optimal functionality.
 
