@@ -36,7 +36,7 @@ databases for optimal functionality.
 Calgary
 
 
-# Extract
+# Extraction
 
 ## Scraping Calgary Real Estate Data
 
