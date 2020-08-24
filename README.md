@@ -175,6 +175,8 @@ Calgary
 	calgary_df.head()
 	
 
+![Screen Shot 2020 08 24 At 12.29.19 AM](images/Screen%20Shot%202020-08-24%20at%2012.29.19%20AM.png)
+
 ### Store Calgary Listings as CSV
 
 	
