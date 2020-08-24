@@ -106,39 +106,21 @@ databases for optimal functionality.
 	del new_df[0]
 	del new_df[1]
 	new_df.head()
-
-![Screen Shot 2020 08 24 At 12.34.29 AM](images/Screen%20Shot%202020-08-24%20at%2012.34.29%20AM.png)
-
-
 	
 	final_df = new_df[2].str.split(', Calgary, AB, ', expand=True)
 	final_df.head()
 	
-
-![Screen Shot 2020 08 24 At 12.35.47 AM](images/Screen%20Shot%202020-08-24%20at%2012.35.47%20AM.png)
-
-
 	
 	df_add = pd.concat([new_df, final_df], axis=1)
 	del df_add[2]
 	df_add.columns = ["price", "address", "postal_code"]
 	df_add.head()
 	
-
-
-![Screen Shot 2020 08 24 At 12.36.18 AM](images/Screen%20Shot%202020-08-24%20at%2012.36.18%20AM.png)
-
-
 	
 	details = pd.DataFrame(house_details)
 	details_df_temp = details[0].str.split('|', expand=True)
 	details_df_temp.head()
 	
-
-
-![Screen Shot 2020 08 24 At 12.36.51 AM](images/Screen%20Shot%202020-08-24%20at%2012.36.51%20AM.png)
-
-
 	
 	details_df_bed = details_df_temp[0].str.replace(' bed', '')
 	details_df_bath = details_df_temp[1].str.replace(' bath', '')
@@ -168,7 +150,6 @@ databases for optimal functionality.
 	details_df.head()
 	
 
-![Screen Shot 2020 08 24 At 12.37.16 AM](images/Screen%20Shot%202020-08-24%20at%2012.37.16%20AM.png)
 
 
 ### Creating Calgary Listings DataFrame
@@ -198,7 +179,6 @@ databases for optimal functionality.
 	calgary_df.head()
 	
 
-![Screen Shot 2020 08 24 At 12.42.45 AM](images/Screen%20Shot%202020-08-24%20at%2012.42.45%20AM.png)
 
 ### Scraping Walk Score Data
 
