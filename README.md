@@ -34,6 +34,8 @@ Using BeautifulSoup to scrape property details (house address, house details).
 ![Picture1](images/Picture1.png)
 
 
+
+
 #!/usr/bin/env python
 # coding: utf-8
 
@@ -337,7 +339,14 @@ cal_df.to_sql('calgary', schema='dbo', con = engine, chunksize=200, method='mult
 score_df.to_sql('score', schema='dbo', con = engine, chunksize=200, method='multi', index=False, if_exists='append')
 
 
+
+
+
+
+
+
 ![Picture2png](images/Picture2png.png)
+
 
 ## Scraping Walk Score Data
 
