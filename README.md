@@ -296,6 +296,7 @@ databases for optimal functionality.
 	
 
 
+![Screen Shot 2020 08 24 At 1.10.33 AM](images/Screen%20Shot%202020-08-24%20at%201.10.33%20AM.png)
 
 ## MySQL
 
