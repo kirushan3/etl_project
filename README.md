@@ -324,13 +324,13 @@ databases for optimal functionality.
 	
 	quoted = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER={Servername};DATABASE=realestate_db")
 	engine = create_engine('mssql+pyodbc:///?odbc_connect={}'.format(quoted))
-	cal_df.to_sql('calgary', schema='dbo', con = engine, chunksize=200, method='multi', index=False, if_exists='replace')
+	calgary_df.to_sql('calgary', schema='dbo', con = engine, chunksize=200, method='multi', index=False, if_exists='replace')
 	score_df.to_sql('score', schema='dbo', con = engine, chunksize=200, method='multi', index=False, if_exists='append')
 	
 
+### Assuming your budget is nothing more than $500,000 and you want a house or apartment with a transit score of above 50 because you prefer taking the subway.
 
-
-
+![Screenshot (112)](images/Screenshot%20(112).png)
 
 
 
