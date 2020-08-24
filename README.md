@@ -276,9 +276,10 @@ databases for optimal functionality.
 	score_dict = score_df.to_dict("records")
 	collection.insert_many(score_dict)
 
+### Calgary collection in realestate_db database
 ![Screen Shot 2020 08 24 At 1.13.47 AM](images/Screen%20Shot%202020-08-24%20at%201.13.47%20AM.png)
 
-
+### Score collection in realestate_db database
 ![Screen Shot 2020 08 24 At 1.14.28 AM](images/Screen%20Shot%202020-08-24%20at%201.14.28%20AM.png)
 
 
@@ -297,6 +298,7 @@ databases for optimal functionality.
 	score_df.to_sql(name= "score", con=engine, if_exists="append", index=False)
 	
 
+### Picture below shows the result of joining the Calgary listings and Score tables in PostgreSQL after loading database.
 
 ![Screen Shot 2020 08 24 At 1.10.33 AM](images/Screen%20Shot%202020-08-24%20at%201.10.33%20AM.png)
 
@@ -308,6 +310,9 @@ databases for optimal functionality.
 	score_df.to_sql(name="score", con=engine, if_exists="append", index=False)
 	
 
+![Screen Shot 2020 08 24 At 1.28.30 AM](images/Screen%20Shot%202020-08-24%20at%201.28.30%20AM.png)
+
+![Screen Shot 2020 08 24 At 1.29.25 AM](images/Screen%20Shot%202020-08-24%20at%201.29.25%20AM.png)
 
 ## SQL Server
 
