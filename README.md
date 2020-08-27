@@ -9,7 +9,7 @@
 
 Just recently, you landed a new job in another province and are trying to decide if you want to buy a new home or apartment.
 You have contacted a real estate company to provide you with a detailed copy of the current listings in the province.
-Unfortunately, the copies provided only contains the current prices of the houes and apartments but gives no indication of the walking,
+Unfortunately, the copies provided only contains the current prices of the house and apartments but gives no indication of the walking,
 transit, and biking routes to nearby amenities. You would like the information provided to include ratings based on the distances to amenities 
 in each category.
 This might pose a slight problem because you want to have all route options available to you and at anytime you need. You decide to get down 
