@@ -334,6 +334,3 @@ databases for optimal functionality.
 
 
 
-## Converting to a Web-based Application
-
-![Screen Shot 2020 08 16 At 8.31.57 PM](images/Screen%20Shot%202020-08-16%20at%208.31.57%20PM.png)
