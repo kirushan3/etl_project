@@ -36,7 +36,7 @@
     
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-12">
             
             <!-- New Table -->
             
@@ -44,22 +44,28 @@
               <thead><tr><th title="Field #1">Price ($)</th>
               <th title="Field #2">Address</th>
               <th title="Field #3">Postal Code</th>
-              <th title="Field #4">Bedrooms</th>
-              <th title="Field #5">Full Bathrooms</th>
-              <th title="Field #6">Half Bathrooms</th>
-              <th title="Field #7">Property Area</th>
+              <th title="Field #4">Bed</th>
+              <th title="Field #5">Full Bath</th>
+                  <th title="Field #6">Half Bath</th>
+                  <th title="Field #7">Property Area</th>
               <th title="Field #8">Property Type</th>
+                  <th title="Field #9">Walk Score</th>
+                  <th title="Field #10">Bike Score</th>
+                  <th title="Field #11">Transit Score</th>
               </tr></thead>
               <tbody><tr>
-                {% for realestate_obj in calgary %}
-              <td align="left">{{realestate_obj.price|safe}}</td>
-              <td align="left">{{realestate_obj.address|safe}}</td>
-              <td align="left">{{realestate_obj.postal_code|safe}}</td>
-              <td align="left">{{realestate_obj.bed|safe}}</td>
-              <td align="left">{{realestate_obj.full_bath|safe}}</td>
-              <td align="left">{{realestate_obj.half_bath|safe}}</td>
-              <td align="left">{{realestate_obj.property_area|safe}}</td>
-              <td align="left">{{realestate_obj.property_type|safe}}</td>
+                {% for item in calgary %}
+              <td align="left">{{item.0|safe}}</td>
+              <td align="left">{{item.1|safe}}</td>
+              <td align="left">{{item.2|safe}}</td>
+                    <td align="left">{{item.3|safe}}</td>
+                    <td align="left">{{item.4|safe}}</td>
+                    <td align="left">{{item.5|safe}}</td>
+              <td align="left">{{item.6|safe}}</td>
+              <td align="left">{{item.7|safe}}</td>
+                    <td align="left">{{item.8|safe}}</td>
+                    <td align="left">{{item.9|safe}}</td>
+                    <td align="left">{{item.10|safe}}</td>
               </tr>
               {% endfor %}
               </tbody>
@@ -68,29 +74,29 @@
             
           </div>
 
-			<div class="col-md-4">
-
-        <!-- New Table -->
-            
-        <table class="table table-bordered table-hover table-condensed">
-          <thead><tr><th title="Field #1">Postal Code</th>
-          <th title="Field #2">Walk Score</th>
-          <th title="Field #3">Bike Score</th>
-          <th title="Field #4">Transit Score</th>
-          </tr></thead>
-          <tbody><tr>
-            {% for realestate_obj in score %}
-          <td align="left">{{realestate_obj.postal_code|safe}}</td>
-          <td align="left">{{realestate_obj.walk_score|safe}}</td>
-          <td align="left">{{realestate_obj.bike_score|safe}}</td>
-          <td align="left">{{realestate_obj.transit_score|safe}}</td>
-          </tr>
-          {% endfor %}
-          </tbody>
-          </table>
-        <!-- End Table -->
-
-            </div>
+{#			<div class="col-md-4">#}
+{##}
+{#        <!-- New Table -->#}
+{#            #}
+{#        <table class="table table-bordered table-hover table-condensed">#}
+{#          <thead><tr><th title="Field #1">Postal Code</th>#}
+{#          <th title="Field #2">Walk Score</th>#}
+{#          <th title="Field #3">Bike Score</th>#}
+{#          <th title="Field #4">Transit Score</th>#}
+{#          </tr></thead>#}
+{#          <tbody><tr>#}
+{#            {% for realestate_obj in score %}#}
+{#          <td align="left">{{realestate_obj.postal_code|safe}}</td>#}
+{#          <td align="left">{{realestate_obj.walk_score|safe}}</td>#}
+{#          <td align="left">{{realestate_obj.bike_score|safe}}</td>#}
+{#          <td align="left">{{realestate_obj.transit_score|safe}}</td>#}
+{#          </tr>#}
+{#          {% endfor %}#}
+{#          </tbody>#}
+{#          </table>#}
+{#        <!-- End Table -->#}
+{##}
+{#            </div>#}
           
     </div>
   </div>
