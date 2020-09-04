@@ -334,7 +334,8 @@ databases for optimal functionality.
 
 
 ## Web-based application
-![Web Application](images/Web%20Application.png)
+![Web App](images/Web%20App.png)
+
 
 
 

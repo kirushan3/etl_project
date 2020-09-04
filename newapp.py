@@ -26,7 +26,7 @@ def home():
     cur = con.cursor()
 
     # execute query
-    cur.execute("SELECT cl.price, cl.address, cl.postal_code, s.walk_score, s.bike_score, s.transit_score FROM calgary AS cl JOIN score AS s ON cl.postal_code = s.postal_code")
+    cur.execute("SELECT cl.price, cl.address, cl.postal_code, cl.bed, cl.full_bath, cl.half_bath, cl.property_area, cl.property_type, s.walk_score, s.bike_score, s.transit_score FROM calgary AS cl JOIN score AS s ON cl.postal_code = s.postal_code")
 
     calgary_data = cur.fetchall()
     print(calgary_data)
@@ -44,6 +44,7 @@ def home():
 
     # Return template and data
     return render_template("index.html", calgary=[i for i in calgary_data])
+
 
 
 
