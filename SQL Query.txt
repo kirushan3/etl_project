@@ -1,0 +1,20 @@
+--create tables for raw data to be loaded into
+CREATE TABLE calgary_df (
+	id SERIAL PRIMARY KEY,
+	price INT,
+	address TEXT,
+	postal_code VARCHAR(10),
+	bedrooms FLOAT,
+	full_bath FLOAT,
+	half_bath FLOAT,
+	property_area FLOAT,
+	property_type TEXT
+	);
+
+CREATE TABLE score_df(
+	id SERIAL PRIMARY KEY,
+	postal_code VARCHAR(10),
+	walk_score INT,
+	transit_score INT,
+	bike_score INT
+	);
