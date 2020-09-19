@@ -52,6 +52,8 @@
                   <th title="Field #9">Walk Score</th>
                   <th title="Field #10">Bike Score</th>
                   <th title="Field #11">Transit Score</th>
+                  <th title="Field #10">Latitude</th>
+                  <th title="Field #11">Longitude</th>
               </tr></thead>
               <tbody><tr>
                 {% for item in calgary %}
@@ -66,6 +68,8 @@
                     <td align="left">{{item.8|safe}}</td>
                     <td align="left">{{item.9|safe}}</td>
                     <td align="left">{{item.10|safe}}</td>
+                    <td align="left">{{item.11|safe}}</td>
+                    <td align="left">{{item.12|safe}}</td>
               </tr>
               {% endfor %}
               </tbody>

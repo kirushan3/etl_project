@@ -26,13 +26,10 @@ def home():
     cur = con.cursor()
 
     # execute query
-    cur.execute("SELECT cl.price, cl.address, cl.postal_code, cl.bed, cl.full_bath, cl.half_bath, cl.property_area, cl.property_type, s.walk_score, s.bike_score, s.transit_score FROM calgary AS cl JOIN score AS s ON cl.postal_code = s.postal_code")
+    cur.execute("SELECT cl.price, cl.address, cl.postal_code, cl.bed, cl.full_bath, cl.half_bath, cl.property_area, cl.property_type, s.walk_score, s.bike_score, s.transit_score, coord.lat, coord.long FROM calgary AS cl JOIN score AS s ON cl.postal_code = s.postal_code JOIN coordinates AS coord ON s.postal_code = coord.postal_codes")
 
     calgary_data = cur.fetchall()
     print(calgary_data)
-
-    # for r in calgary_data:
-    #     print(f'house on {r[1]} costs ${r[0]} and a walkscore of {r[3]}')
 
 
     # close cursor
