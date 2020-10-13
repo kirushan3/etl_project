@@ -7,15 +7,10 @@
 
 ## Objective
 
-• Extracting Real Estate listings in Calgary, Alberta
-and Walk Scores for corresponding house addresses.
-• Walk Score analyzes the walking routes of these
-addresses to nearby amenities. Points are awarded
-based on the distance to amenities in each
-category.
+• Extracting Real Estate listings in Calgary, Alberta and Walk Scores for corresponding house addresses.
+• Walk Score analyzes the walking routes of these addresses to nearby amenities. Points are awarded based on the distance to amenities in each category.
 • Transforming retrieved data into easy-to-read tables
-• Loading transformed data into relational and nonrelational
-databases for optimal functionality
+• Loading transformed data into relational and nonrelational databases for optimal functionality
 
 
 ## Data Sources
@@ -62,15 +57,13 @@ Using the corresponding addresses from the Calgary real estate data
 ![Picture6](images/Picture6.png)
 
 #### Joining the Calgary Real Estate Data frames
-• Concatenating House Address/Price details and
-House details data frames.
+• Concatenating House Address/Price details and House details data frames.
 
 ![Picture7](images/Picture7.png)
 
 
 ## Cleaning the Walk Score Data
-• Data converted into data frame and columns
-named.
+• Data converted into data frame and columns named.
 
 ![Picture8](images/Picture8.png)
 
